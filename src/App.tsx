@@ -3,6 +3,7 @@ import FileDownload from "@mui/icons-material/FileDownload";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   AppBar,
+  Box,
   Container,
   CssBaseline,
   IconButton,
@@ -151,14 +152,25 @@ export default function App() {
           />
         </Toolbar>
       </AppBar>
-      <Container maxWidth="md">
-        <Header />
-        <Profile />
-        <Experience />
-        <Skills />
-        <Education />
-        <Footer />
-      </Container>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100vw",
+          justifyContent: "center", // Centers the Container horizontally
+          alignItems: "center", // Optional: adjusts alignment vertically
+          paddingTop: 4,
+          paddingBottom: 4,
+        }}
+      >
+        <Container maxWidth="md" sx={{ margin: "0auto" }}>
+          <Header />
+          <Profile />
+          <Experience />
+          <Skills />
+          <Education />
+          <Footer />
+        </Container>
+      </Box>
     </ThemeProvider>
   );
 }
