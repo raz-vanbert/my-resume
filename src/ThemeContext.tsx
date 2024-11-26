@@ -41,6 +41,17 @@ export default function CustomThemeProvider({
           },
         },
         typography: { fontFamily: "Roboto, Arial, sans-serif" },
+        components: {
+          MuiButton: {
+            styleOverrides: {
+              root: {
+                "&:hover": {
+                  color: mode === "light" ? "#333" : "#e0e0e0",
+                },
+              },
+            },
+          },
+        },
       }),
     [mode]
   );
