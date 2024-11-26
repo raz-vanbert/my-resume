@@ -29,7 +29,7 @@ export default function Home() {
           color="primary"
           component={RouterLink}
           to="/services"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2, mb: 2 }}
         >
           View Consulting Services
         </Button>

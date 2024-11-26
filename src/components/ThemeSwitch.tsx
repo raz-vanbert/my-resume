@@ -1,9 +1,9 @@
 import { styled, Switch } from "@mui/material";
 
 export const ThemeSwitch = styled(Switch)(({ theme }) => ({
-  marginLeft: 8,
-  width: 62,
-  height: 30,
+  marginLeft: 6,
+  width: 32,
+  height: 20,
   padding: 0,
   "& .MuiSwitch-switchBase": {
     margin: 1,
@@ -11,7 +11,7 @@ export const ThemeSwitch = styled(Switch)(({ theme }) => ({
     transform: "translateX(0px)",
     "&.Mui-checked": {
       color: "#fff",
-      transform: "translateX(32px)",
+      transform: "translateX(12px)",
       "& .MuiSwitch-thumb:before": {
         content: '"🌙"',
         position: "absolute",
@@ -29,9 +29,9 @@ export const ThemeSwitch = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-thumb": {
     backgroundColor: theme.palette.mode === "dark" ? "#333" : "#fefefe",
-    width: 28,
-    height: 28,
-    borderRadius: 14,
+    width: 18,
+    height: 18,
+    borderRadius: 9,
     position: "relative",
     "&:before": {
       content: '"☀️"',
@@ -44,7 +44,7 @@ export const ThemeSwitch = styled(Switch)(({ theme }) => ({
     },
   },
   "& .MuiSwitch-track": {
-    borderRadius: 34 / 2,
+    borderRadius: 9,
     opacity: 1,
     backgroundColor: theme.palette.mode === "dark" ? "#aab4be" : "#8796A5",
   },

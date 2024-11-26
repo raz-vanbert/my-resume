@@ -15,7 +15,7 @@ export default function CustomThemeProvider({
 }: {
   children: ReactNode;
 }) {
-  const [mode, setMode] = useState<PaletteMode>("light");
+  const [mode, setMode] = useState<PaletteMode>("dark");
 
   const colorMode = useMemo(
     () => ({
@@ -42,11 +42,21 @@ export default function CustomThemeProvider({
         },
         typography: { fontFamily: "Roboto, Arial, sans-serif" },
         components: {
+          MuiIconButton: {
+            styleOverrides: {
+              root: {
+                borderRadius: "4px",
+                "&:hover": {
+                  color: "#009688",
+                },
+              },
+            },
+          },
           MuiButton: {
             styleOverrides: {
               root: {
                 "&:hover": {
-                  color: mode === "light" ? "#333" : "#e0e0e0",
+                  color: "#009688",
                 },
               },
             },
