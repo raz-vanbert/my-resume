@@ -29,6 +29,9 @@ export default function NavBar() {
           <Button color="inherit" component={RouterLink} to="/resume">
             Resume
           </Button>
+          <Button color="inherit" component={RouterLink} to="/services">
+            Services
+          </Button>
           <Box sx={{ flexGrow: 1 }} />
           <Tooltip title="View/Download PDF Resume" arrow>
             <IconButton
